@@ -9,7 +9,7 @@
 /perf.data
 /perf.data.old
 /massif.out.*
-
+/tmp
 *~
 *.swp
 *.o
