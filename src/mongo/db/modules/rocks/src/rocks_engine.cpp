@@ -822,6 +822,8 @@ namespace mongo {
 
         table_options.format_version = 2;
 
+        table_options.pin_top_level_index_and_filter=false;
+
         table_options.pin_l0_filter_and_index_blocks_in_cache = false;
 
         if (isOplog && trimHistory) {
