@@ -814,8 +814,12 @@ namespace mongo {
         options.rate_limiter = _rateLimiter;
         rocksdb::BlockBasedTableOptions table_options;
         table_options.block_cache = _blockCache;
-        table_options.filter_policy.reset(rocksdb::NewBloomFilterPolicy(10, false));
-        table_options.block_size = 16 * 1024;  // 16KB
+
+        // 禁用bloom filter
+        table_options.filter_policy.reset();
+
+        table_options.block_size = 4 * 1024;  // 16KB
+        
         table_options.format_version = 2;
 
         if (isOplog && trimHistory) {
@@ -899,9 +903,10 @@ namespace mongo {
                 invariantRocksOK(s);
             }
         }
-        
+
         // 每个sstable 2MB
-        options.target_file_size_base=2*1048576;
+        options.target_file_size_base = 2 * 1048576;
+        // options.
 
         return options;
     }
