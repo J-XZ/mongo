@@ -52,7 +52,7 @@ configs:
         arg_vartype: String
         cpp_varname: 'rocksGlobalOptions.compression'
         short_name: rocksdbCompression
-        default: 'snappy'
+        default: 'none'
         validator:
             callback: 'RocksGlobalOptions::validateRocksdbCompressor'
     "storage.rocksdb.maxWriteMBPerSec":
