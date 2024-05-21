@@ -154,13 +154,13 @@ configs:
         arg_vartype: Int
         cpp_varname: 'rocksGlobalOptions.numLevels'
         short_name: rocksdbNumLevels
-        default: 5
+        default: 7
     "storage.rocksdb.maxWriteBufferNumber":
         description: 'rocksdb engine max write buffer number'
         arg_vartype: Int
         cpp_varname: 'rocksGlobalOptions.maxWriteBufferNumber'
         short_name: rocksdbMaxWriteBufferNumber
-        default: 4
+        default: 2
     "storage.rocksdb.level0FileNumCompactionTrigger":
         description: 'rocksdb engine level0 file num compaction trigger'
         arg_vartype: Int
