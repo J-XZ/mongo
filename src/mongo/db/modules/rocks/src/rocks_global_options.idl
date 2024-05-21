@@ -133,15 +133,15 @@ configs:
         arg_vartype: Long
         cpp_varname: 'rocksGlobalOptions.dbWriteBufferSize'
         short_name: rocksdbDbWriteBufferSize
-        # 2 MB
-        default: 2097152
+        # 128 MB
+        default: 134217728
     "storage.rocksdb.writeBufferSize":
         description: 'rocksdb engine write buffer size'
         arg_vartype: Long
         cpp_varname: 'rocksGlobalOptions.writeBufferSize'
         short_name: rocksdbWriteBufferSize
         # 16 MB
-        default: 16777216
+        default: 2097152
     "storage.rocksdb.delayedWriteRate":
         description: 'rocksdb engine delay write rate'
         arg_vartype: Long
