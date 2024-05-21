@@ -899,6 +899,9 @@ namespace mongo {
                 invariantRocksOK(s);
             }
         }
+        
+        // 每个sstable 2MB
+        options.target_file_size_base=2*1048576;
 
         return options;
     }

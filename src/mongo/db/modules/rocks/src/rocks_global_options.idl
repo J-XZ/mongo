@@ -166,26 +166,26 @@ configs:
         arg_vartype: Int
         cpp_varname: 'rocksGlobalOptions.level0FileNumCompactionTrigger'
         short_name: rocksdbLevel0FileNumCompactionTrigger
-        default: 4
+        default: 1
     "storage.rocksdb.level0SlowdownWritesTrigger":
         description: 'rocksdb engine level0 stop writes trigger'
         arg_vartype: Int
         cpp_varname: 'rocksGlobalOptions.level0SlowdownWritesTrigger'
         short_name: rocksdbLevel0SlowdownWritesTrigger
-        default: 128
+        default: 2
     "storage.rocksdb.level0_stop_writes_trigger":
         description: 'rocksdb engine level0 stop writes trigger'
         arg_vartype: Int
         cpp_varname: 'rocksGlobalOptions.level0StopWritesTrigger'
         short_name: rocksdbLevel0StopWritesTrigger
-        default: 512
+        default: 4
     "storage.rocksdb.maxBytesForLevelBase":
         description: 'rocksdb engine max bytes for level base'
         arg_vartype: Long
         cpp_varname: 'rocksGlobalOptions.maxBytesForLevelBase'
         short_name: rocksdbMaxBytesForLevelBase
-        # 512 MB
-        default: 536870912
+        # 4 MB
+        default: 4194304
     "storage.rocksdb.softPendingCompactionMBLimit":
         description: 'rocksdb engine soft pending compaction MB limit'
         arg_vartype: Int
