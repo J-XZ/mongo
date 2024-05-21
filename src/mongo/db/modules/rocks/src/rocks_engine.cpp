@@ -819,8 +819,10 @@ namespace mongo {
         table_options.filter_policy.reset();
 
         table_options.block_size = 4 * 1024;  // 16KB
-        
+
         table_options.format_version = 2;
+
+        table_options.pin_l0_filter_and_index_blocks_in_cache = false;
 
         if (isOplog && trimHistory) {
             options.comparator = &comparatorFake;
