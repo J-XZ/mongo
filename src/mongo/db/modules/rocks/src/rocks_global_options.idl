@@ -103,7 +103,7 @@ configs:
         arg_vartype: String
         cpp_varname: 'rocksGlobalOptions.logLevel'
         short_name: rocksdbLogLevel
-        default: 'info'
+        default: 'debug'
         validator:
             callback: 'RocksGlobalOptions::validateRocksdbLogLevel'
     "storage.rocksdb.maxConflictCheckSizeMB":
@@ -133,8 +133,8 @@ configs:
         arg_vartype: Long
         cpp_varname: 'rocksGlobalOptions.dbWriteBufferSize'
         short_name: rocksdbDbWriteBufferSize
-        # 128 MB
-        default: 134217728
+        # 2 MB
+        default: 2097152
     "storage.rocksdb.writeBufferSize":
         description: 'rocksdb engine write buffer size'
         arg_vartype: Long
