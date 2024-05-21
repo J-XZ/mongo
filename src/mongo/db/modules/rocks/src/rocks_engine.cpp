@@ -225,8 +225,8 @@ namespace mongo {
                 }
             }
             // @note 配置block cache为默认的8字节
-            _blockCache = rocksdb::NewLRUCache(cacheSizeGB * 1024 * 1024 * 1024LL, 6);
-            // _blockCache = rocksdb::NewLRUCache(8 * 1024 * 1024LL);
+            // _blockCache = rocksdb::NewLRUCache(cacheSizeGB * 1024 * 1024 * 1024LL, 6);
+            _blockCache = rocksdb::NewLRUCache(8 * 1024 * 1024LL);
         }
         _maxWriteMBPerSec = rocksGlobalOptions.maxWriteMBPerSec;
         _rateLimiter.reset(
